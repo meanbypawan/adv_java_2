@@ -1,0 +1,38 @@
+Wrapper Classes:-
+  Why
+  What
+  How
+------------------------------
+What do you think, Java is partially OO or Pure OO ?
+Ans:- Java is partially object oriented but you can write
+100% object oriented program in java >  
+
+byte x; not an object
+int x; not an object
+char x; not an object
+long x;not an object
+short x; not an object
+boolean,float,double x; not object
+-------------------------------------------
+byte ----> Byte class
+short ---> Short class
+int -----> Integer class
+long  ---> Long class
+float ---> Float class
+double --> Double class
+char ----> Character class
+boolean -> Boolean class
+------------------------------------------------
+String-------> Primitive, Object
+primitive --->String,Object
+Object-------> Primitive,String
+
+1. Primitive---->Object[Wrapper Object]
+2. Object ------> Primitive
+3. String ------> Primitive
+4. Primitive ---> String
+5. Object ------> String
+
+
+
+
