@@ -1,0 +1,53 @@
+Advance Java [J2SE+J2EE]
+---------------------------------------------
+Agenda :-
+  Wrapper Classes
+  Collection *****
+  Database Concept [MySQL]:- ***** 3-4 days 
+  SQL  
+  JDBC [Java Database Connectivity]
+  CRUD Application Using Console/Swing + JDBC + Database(MySQL)
+  Model + DAO
+  Web Development
+  HTML,CSS,Javascript Introduction 5-7 days
+  Servlet [HTML in Java]
+  JSP [Java Server Pages, Java In HTML]
+   a. Declarative Tag <%!   %>
+   b. Scriptlet Tag <% %>
+   c. Expression Tag <%=expression%>  
+  jsp:useBean, jsp:setProperty
+  MVC 
+  ---------------------------------------------------------------------------
+  Web application
+    a. Multipage Web Application
+    b. Single Page Web Application [ReactJs, Angular---> AJAX]
+    Client-Application<-----API------>ServerAppl./Backend Application					
+  API [Api developer|Backend]:-*****
+    a. SOAP :- XML 
+    b. REST :--JSON
+  Data Fomat
+    a. XML
+       Customer [id,name,age,contact]
+       <cusomer>
+          <id>1001</id>
+          <name>Cheeku Sing</name>
+          <age>25</age>
+          <contact>9009111222</contact>
+       </cusomer> 
+    b.JSON *****
+      {"id":1001,"name":"cheeku sing","age":21,"contact":909222}
+  File uploading,
+  File Downloading
+  AJAX [Asynchornous javascript and XML]    
+  45 days ony
+
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
