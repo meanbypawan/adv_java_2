@@ -1,7 +1,7 @@
 Advance Java [J2SE+J2EE]
 ---------------------------------------------
 Agenda :-
-  Wrapper Classes
+  Wrapper Classes  ------> Done
   Collection *****
   Database Concept [MySQL]:- ***** 3-4 days 
   SQL  
@@ -39,8 +39,38 @@ Agenda :-
   File uploading,
   File Downloading
   AJAX [Asynchornous javascript and XML]    
-  45 days ony
-
+ ----------------------------------------------------------------------------------------------
+  Collection :-
+    What , Why, How
+    
+  Process Large Amount Of Data :-
+      1. Array
+          a. Data quantitiy is known in advance .
+          b. Same/Similar/Homogenous type of data
+          c. Primitive/Object
+          d. For better performance
+          e. Data indexing
+          f. Fixed in size
+          ----------------------------------------------
+          Problem :-
+           a. ArrayIndexOutOfBoundsException
+           b. Lots of memory westage
+     Question :- Can we Store Different type of data in java array ?
+           "AB",  54 ,  true  
+            Object x[] = new Object[1000];
+            or
+            Object data[] = {"AB",54,true};
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
   
   
   
