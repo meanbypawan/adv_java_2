@@ -60,6 +60,79 @@ Agenda :-
             Object x[] = new Object[1000];
             or
             Object data[] = {"AB",54,true};
+            data[0].getClass().getNam() ---> String
+ ------------------------------------------------------------------------------------------------------
+ Array :-
+   1. Array is fixed in size
+   2. Better Perormance
+   3. Memory utilization [X]
+   4. primitive/object 
+   5. Homogenous data can be stored
+ Collection :-
+   1. Growable in nature
+   2. Less performance then array
+   3. Better memory utilization
+   4. complete collection operate on object
+   5. Homogenous , Hetrogenous type of data
+   6. Data structure support.
+ -----------------------------------------------------------------------
+ What is collection ? 
+  Ans :- Whenever we have to represent group of individual object[data] as single unit then go for the collection concept.
+  Collection is container object.
+  Bag, Suitcase
+   Cheeku                        Peeku
+   Bucket ------------------------->  Bucket
+     1000 object[Ball]
+      Select								 Insert	
+      1000								1000
+                                 2000 	
+ ----------------------------------------------------------------------------------------------
+    Collection :--- add(), remove(), iterator(), contains(), size(), clear()
+                   c1.addAll(c2), c1.removeAll(c2), c1.retain(c2)
+                 ...............................................................
+ 1. Iterable(I) [iterator()]
+ 2. Collection(I)[add(), remove(), iterator(), contains(), size(), clear()]
+ 3. List(I) :-   List is child of Collection. Whenever you want to manage the
+    duplicate data, go for List Collection    
+    Child Classes of List
+    ArrayList, Collection<----List<----LinkedList, Vector<---Stack
+ 4. Set(I) :- Set is child oc Collection . Whenever we have to manage data uniqueness.
+      HashSet<----LinkedHashSet
+  5. SortedSet :- Whenever we have to manage the data uniquess along with sorting order.
+     Iterable<----Collection<----Set<-----SortedSet<--TreeSet(class) 
+    Sorting Order :-
+      a. Default Natural Sorting Order/Logic ---> Comparable
+      b. Customized Sorting Order/Logic     --> Comparator
+  6. NavigableSet :---1, 3, 54, 6, 90, 76, 24
+      element :- 50
+      TreeSet(C)
+  7. Queue :-
+  -------------------------
+  8. Map:-
+          
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
