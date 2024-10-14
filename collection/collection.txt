@@ -1,0 +1,23 @@
+Iterable<--Collection<--List<---ArrayList
+
+Using Collection
+  a. With Type Safety
+  b. Without Type Safety
+
+ArrayList [Internally make a use of Array]
+  |--ArrayList() ----------> ic : 10 
+  |--ArrayList(int) -------> Initial Capacity
+  |--ArrayList(Collection)
+
+  1. ArrayList al = new ArrayList(); // ic:10
+  2. ArrayList al = new ArrayList(1000); // ic:1000
+  3. ArrayList al = new ArrayList(c1); //  
+ -----------------------------------------------
+1. Iterable al = new ArrayList();
+2. Collection al = new ArrayList();
+3. List al = new ArrayList();
+4. ArrayList al = new ArrayList();
+-------------------------------------
+In java all collection classes are generic by default
+ArrayList<Integer> al = new ArrayList<Integer>(); // ---Integer data
+   
