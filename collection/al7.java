@@ -6,7 +6,6 @@ class TestMain{
         al.add(1);
         al.add(3);
         al.add(4);
-        
         for(int i=0; i<al.size(); i++)
         {
              Integer element = al.get(i);
