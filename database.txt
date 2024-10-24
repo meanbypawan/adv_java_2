@@ -32,6 +32,82 @@ Database :
        grant, revoke
    5. TCL (Transaction Control Language)
        commit, rollback
+  ------------------------------------
+  create database batch530;
+  
+  Setting current database
+  use batch530;
+  
+  Database----> Table
+  Table :- it is collection of records/tuples/row. Where tuple/row represent
+  the real world entity.
+  
+  product :{id,name,price,brand,category,description}
+  class Product{}
+  
+  user(name,age,gender,contact) --> Schema
+  
+  Constraint
+    primary key
+    foreign key
+    unique key
+    not null
+    check
+    default value
+ -------------------------------------
+ Dataype :- int, tinyint, float, char, varchar, text, blob, clob, date
+ char v/s varchar
+ char :-  fixed length characters
+ varchar :- variable length characters
+ 100 :--   display size
+ Creating Table
+  create table user(
+  id int primary key auto_increment,
+  name varchar(100),
+  age int(3) check(age>18),
+  contact varchar(10) unique key,
+  gender varchar(5)
+  ) 
+------------------------------
+show create table user.
+----------------------------------------------
+alter table user add favouriteColor varchar(20) default 'black'
+alter table user drop column favouriteColor  
+----------------------------------------------------------
+Inserting record in database table
+insert into user(name,contact,gender,favouriteColor)
+values('chinky','9009111002','female','pink');
+
+insert into user(name,age,contact,gender,favouriteColor)
+values('rinku',27,'9009111221','male','red'),
+('sahil',29,'9009111233','male','blue'),
+('lili',28,'9009111244','female','orange'),
+('cheeku',29,'9009111255','male','green'),
+('peeku',28,'9009111266','male','pink'),
+('neesha',24,'9009111277','female','yellow'),
+('leesha',23,'9009111288','female','red');
+
+alter table user modify column gender varchar(6)
+-------------------------------------------------------------------------------
+CRUD :-
+ C :- Create/Inserting Record
+ R :- Reteriving/Selecting Record
+ U :- Updating Record
+ D :- Deleting Record
+--------------------------------------------------------
+  select * from user;
+  projection in database:- select/targeting some specific fields
+  select id,name,age,favouriteColor from user
+  Filter :- where clause
+  criteria(condition)
+  
+  select id,name,age,favouriteColor from user where age > 25
+  select * from user where age >=23 and age <=28  
+  select * from user where age between 23 and 28
+  select * from user where age = 23 or age = 28
+  select * from user where age in (23,28,31)
+  select * from user where age is null
+  select * from user where age is not null
      
  
  
