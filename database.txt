@@ -108,6 +108,50 @@ CRUD :-
   select * from user where age in (23,28,31)
   select * from user where age is null
   select * from user where age is not null
+  -----------------------------------------------------------------
+  Q1. What is Collection ?
+  2. Difference between collection and array
+  3. How to store hetrogenous type of data in java array
+  4. Difference between Collection and Collections ?
+  5. What is difference between ArrayList and LinkedList
+  6. What is difference between ArrayList and Vector
+  7.  Difference between List and Set
+  8. Difference between HashSet and LinkedHashSet
+  9. How set internally manage the data uniquness.
+  10. What are significance of hashCode() and equals() method in java
+  11. What do you mean by load-factor in hastset
+  12. What is bucket in HashSet
+  13. How to get Synchronized version of ArrayList ?
+  14. What is difference between Comparator and Comparable
+      Default Natural Sorting Order and Customized Sorting Order
+  15. What is the role of default constructor in TreeSet
+  16. Can we add null entry in HashSet, LinkedHashSet and TreeSet
+  17. Let me know the datastructure used by ArrayList, LinkedList, HashSet, LinkedHashSet and Tree Set in Java
+  18. What is difference between Library and Framework ?
+  19. What is map ? What do you think , is Map a collection ? If yes then why it is not in collection hierarchy[not child of Collection]
+  20. Difference between HashMap and Hashtable
+  21. How Map internally Work ?
+  22. Difference between HashMap and LinkedHashMap ?
+  23 What are cursor in Java [Iterator, ListIterator, Enumeration]
+  24. Difference between Iterator and ListIterator.
+  25 What is SplIterator ? How it is different from Iterator
+  26. What is wrapper classes ?
+  27 What is difference between Wrapper Classes and Primitive Types.
+  28 Where is to use wrapper classes over primitive.
+  29 What is Boxing, AutoBoxing, Unboxing and AutoUnBoxing ?
+  30. What are the different way to convert primitive to String Object and vice versa.
+  31. Write a Java program to print "Happy Diwali" in Start [*] Text .
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
      
  
  
