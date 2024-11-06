@@ -141,21 +141,74 @@ CRUD :-
   29 What is Boxing, AutoBoxing, Unboxing and AutoUnBoxing ?
   30. What are the different way to convert primitive to String Object and vice versa.
   31. Write a Java program to print "Happy Diwali" in Start [*] Text .
-      
+---------------------------------------------------------------------
+max(), min(), avg(), sum(), count()....
+select max(age) from user;
+select avg(age) from user;
+select * from user where age = max(age)
+nested query:-
+--------------------------------------------------
+sorting [order by]
+select * from user order by age desc limit 1
+----------------------------------------------------------------------------------------
+select * from user where age = ( select max(age) from user)
+
+select * from user where age = ( select max(age) from user
+  where age != (select max(age) from user));
+select * from user where age = (
+  select max(age) from user where age <
+    ( select max(age) from user where age <
+      (select max(age) from user)));
+----------------------------------------------------------------------------------
+select * from user order by age desc limit 3;
+select * from user order by age desc limit 3,5      
+-------------------------------------------------------------------
+wild card character 
+  _ , %
+% :- zero or any number of occurance
+_ :- fixed position    
+select * from user where name like '%u';
+select * from user where name like 'r%';  
+select * from user where name like '%s__'
+select * from user where name like '%ee%';  
+----------------------------------------------------------------------
+user
+city [id,cityName]
+create table city(id int primary key auto_increment,
+cityName varchar(100))
+insert into city(cityName) values('Indore'),('Jabalpur'),('Delhi'),('Pune'),('Mumbai'),('Agra')
+--------------------------------------------------
+Primary key , Foreign Key
+ 1. one to one
+ 2. one to Many
+ 3. Many to Many [Third Table] 
+alter table user add (
+  cityId int,
+  foreign key(cityId) references city(id));  
+------------------------------------------------------
+JOIN
+ 1. inner join
+ 2. left outer join
+ 3. right outer join
+ 4. cross join
+ 5. self join  
   
+  insert into user(name,age,contact,gender,favouriteColor)
+values('rinku',27,'9009111221','male','red');
   
-  
-  
-  
-  
-  
-  
-  
-  
+ select user.id, user.name,user.age,city.cityName 
+ from user inner join city on user.cityId = city.id where user.age > 22
+ 
+ select user.id,user.name,user.age,city.cityName
+ from user left outer join city on user.cityId = city.id
      
+  select user.id,user.name,user.age,city.cityName
+ from user right outer join city on user.cityId = city.id
+     
+ select * from user,city
  
- 
- 
+  select count(*) as TOTAL, city.cityName as CITY_NAME 
+ from user inner join city on user.cityId = city.id group by user.cityId
  
  
  
