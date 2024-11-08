@@ -211,7 +211,58 @@ values('rinku',27,'9009111221','male','red');
  from user inner join city on user.cityId = city.id group by user.cityId
  
  
+--------------------------------------------------------
+Statement
+1. It is used to execute non-parameterized sql query.
+2. Statement st = con.createStatement();
+   st.executeUpdate(sql); or st.execute(sql) or st.executeQuery(sql);
+3. int i=1;
+   while(i<10){
+      String sql=  "insert.............................";
+      st.executeUpdate(sql);
+      i++;
+   }
+4. It may causes the SQL Injection   
+PreparedStatement 
+1. It is used to execute parameterized sql query.
+2. PreparedStatement ps = con.prepareStatement(sql);
+   ps.executeUpdate() or ps.execute() or ps.executeQuery(); 
+3. int i=1;   
+   String sql=  "insert.............";
+   PreparedStatement ps = con.prepareStatement(sql);
+   while(i<=10){
+      // set data in sql query
+      ps.executeUpdate();
+      i++;  
+   }
+ 4. Prevent SQL Injection   
+--------------------------------------------------------------------------------------------
+MVC [Model-View-Controller]
+
+Database L-
+  product(id,title,price,brand)
+  Operation for product
+    insert
+    delete
+    update
+    select
+  
+Model :- It represent data in application
+ class Product{
  
+ }
+DAO [Data Access Object]
+ProductDAO
+CategoryDAO
+UserDAO
+-----------------------------------------------------
+View[Console Screen]---->data-->Model--->DAO--->Database 
+
+
+
+
+
+
      
 
 
