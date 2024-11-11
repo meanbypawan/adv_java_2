@@ -258,6 +258,68 @@ UserDAO
 -----------------------------------------------------
 View[Console Screen]---->data-->Model--->DAO--->Database 
 
+Type of ResultSet
+ a. TYPE_FORWARD_ONLY
+ b. TYPE_SCORLL_INSENSITIVE
+ c. TYPE_SCROLL_SENSITIVE
+-----------------------------------------
+beforeFirst()
+afterLast()
+isBeforeFirst()
+isAfterLast()
+absolute(3)
+relative(2)
+----------------------------------------------------
+Wrapper-classes
+Collection
+Database | SQL
+JDBC
+-------------------------------------------------------
+Web-application
+  HTML
+  CSS
+  Javascript
+--------------------------------------------------------------
+HTML :- HyperText Markup Language
+Markup :--- Tag
+
+HTML Tag :- <div>Some content</div>
+HTML Element  = Opening Tag + Content + Closing Tag
+Paired 
+Unpaired
+--------------------------------------------------------------
+Tags In HTML
+  Block Level :-  div, p ...
+  Inline :- span, small, label, input....
+  Text-Formatting :-
+    b, i, u, strong, sup, sub, em.
+  Heading :-
+    h1, h2, h3, h4, h5, h6
+  Link :-
+    a
+  Media :-
+    img, audio, video
+  Form Input fields :-
+     form        
+    <input [type=''text,password,email,number, radio, checkbox, file, color, button."]
+     select
+   Table :-
+     table, thead, tbody, tfoot, tr, th, td
+     ---------------------------------------------------
+     article, header, footer, section, main......
+     
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

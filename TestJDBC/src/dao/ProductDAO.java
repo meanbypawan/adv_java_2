@@ -7,9 +7,7 @@ import java.util.ArrayList;
 
 import model.Product;
 import p1.GetConnection;
-/*
-   customerId,customerName,address,accountNo
- * */
+
 public class ProductDAO {
   public static Product get(int id) {
 	  Product p = null;
@@ -46,8 +44,18 @@ public class ProductDAO {
 	  }
 	  return false;
   }
-  public static void delete(int id) {
-	  
+  public static boolean delete(int id) {
+    try(Connection con = GetConnection.getConnection();){
+    	String sql = "delete from product where id = ?";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setInt(1, id);
+        if(ps.executeUpdate()!=0)
+        	return true;
+    }
+    catch(Exception e) {
+    	e.printStackTrace();
+    }
+    return false;
   }
   public static boolean update(Product p) {
 	  try(Connection con  = GetConnection.getConnection();){
