@@ -1,0 +1,47 @@
+<!-- 
+  HTML Form 
+  Upon form submission
+  new http request is created
+-->
+<html>
+    <body>
+     <form method="GET" action="Server-url">
+       <p>
+        <input name="username" type="text" placeholder="Enter username"/>
+       </p> 
+       <p>
+        <input name="password" type="password" placeholder="Enter password"/>
+       </p>
+       <p>
+        <input name="email" type="email" placeholder="Enter email id"/>
+       </p> 
+       <p>
+         <input name="age" type="number" placeholder="Enter Age" min="18"/>
+       </p>
+       <p>
+         <select name="qualification">
+            <option>Select qualification</option>
+            <option>Doctorate</option>
+            <option>Post graduate</option>
+            <option>Graduate</option>
+         </select>
+       </p>
+       <p>
+        <input name="docfile" type="file" placeholder="upload resume"/>
+       </p>
+       <p>
+        Male <input name="gender" type="radio" value="male"/>
+        Female <input name="gender" type="radio" value="Female"/>
+       </p>
+       <p>
+        <label>Select hobbies</label>
+        Cricket <input name="chk1" type="checkbox"/>
+        Hockey <input name="chk2" type="checkbox"/>
+        Volleyboll <input name="chk3" type="checkbox"/>
+       </p>
+       <p>
+        <button type="submit">Submit</button>
+       </p>
+     </form>
+    </body>
+</html>
