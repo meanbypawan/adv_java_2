@@ -1,0 +1,75 @@
+<html>
+    <head>
+      <!-- 
+        Flex
+         display : flex
+         flex-direction
+           |----row
+           |----column
+           |----row-reverse
+           |----column-reverse
+         justify-content
+         align-items
+
+         1. flex-direction: row
+             a. justify-content : horizontally aling
+             b. align-items :  vertically align
+         2. flex-direction: column
+             a. justify-content : Vertically align
+             b. align-items : horizontally
+        ----------------------------------
+        value of justify-content | align-items
+         a. center
+         b. space-between
+         c. space-around
+         d. space-evenly     
+             
+      -->
+      <style>
+        .container,.container-2{
+            height:150px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .container div{
+            width: 150px;
+            height: 70px;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .child{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .child span{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="container">
+          <div class="first">ABC</div>
+          <div class="second">XYZ</div>
+          <div class="third">PQR</div>
+        </div>
+        <div class="container-2" style="margin-top: 20px;">
+            <div class="child">
+                <span>First</span>
+                <span>Second</span>
+                <span>Third</span>
+            </div>
+        </div>
+    </body>
+</html>
