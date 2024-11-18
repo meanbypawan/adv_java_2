@@ -1,0 +1,43 @@
+Javascript :-
+ 1. Javascript is client side as well as server side scripting language.
+ 2. Javascript is function oriented , object oriented multiparadigm scripting language.
+ 3. Javascript is dynamically typed scriptiong language
+    c/c++/java ---> Typed programming language
+    int x;
+    js:---
+     var x;
+     x = 20;  x = "hello";
+ 4. Javascript has capability to convert html into dhtml
+ 5. Javascript is simple
+ 6. Javascript is single threaded by default.
+ ----------------------------------------------------------------------------
+ p1.hml
+ <html>
+    <head>
+    </head>
+    <body>
+       <script>
+         // Javascript code
+         // Addition of two number
+       </script>
+    </body>
+ <html>
+ Browser is responsible to execute js code.
+  Javascript Engine / Javascript Virtula Machine
+  
+  Ex :------- Chakra
+  ME :-----Chakra core
+  GC :-----V8 engine
+  MF :------Spider Monkey
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
