@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <center>
+            <img id="main" src="./images/first.jpeg" alt="" width="500px" height="400px"/>
+            <br/><br/>
+            <img onclick="changeImage(this)" id="first" src="./images/fourth.jpg" width="150px" height="100px" alt=""/>&nbsp;&nbsp;&nbsp;
+            <img onclick="changeImage(this)" id="second" src="./images/second.jpeg" width="150px" height="100px" alt=""/>&nbsp;&nbsp;&nbsp;
+            <img onclick="changeImage(this)" id="third" src="./images/third.jpg" width="150px" height="100px" alt=""/>&nbsp;&nbsp;&nbsp;
+        </center>
+        <script>
+            function changeImage(currentImage){
+              var mainImage = document.getElementById("main");
+              var temp = mainImage.src;
+              mainImage.src = currentImage.src;
+              currentImage.src = temp;
+            }
+        </script>
+    </body>
+</html>
