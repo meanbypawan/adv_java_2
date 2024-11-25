@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+   <servlet>
+      <servlet-name>HelloServlet</servlet-name>
+      <servlet-class>p1.HelloServlet</servlet-class>
+      <init-param>
+         <param-name>d1</param-name>
+         <param-value>abc</param-value>
+      </init-param>
+      <init-param>
+        <param-name>d2</param-name>
+        <param-value>xyz</param-value>
+      </init-param>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>HelloServlet</servlet-name>
+      <url-pattern>/hello</url-pattern>
+   </servlet-mapping>
+   <servlet>
+       <servlet-name>WelcomeServlet</servlet-name>
+       <servlet-class>p1.WelcomeServlet</servlet-class>
+       <init-param>
+          <param-name>d3</param-name>
+          <param-value>pqr</param-value>
+       </init-param>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>WelcomeServlet</servlet-name>
+      <url-pattern>/welcome</url-pattern>
+   </servlet-mapping>
+   <context-param>
+     <param-name>D</param-name>
+     <param-value>JAVA....</param-value>
+   </context-param>
+</web-app>
