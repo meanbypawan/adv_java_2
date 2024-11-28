@@ -1,0 +1,6 @@
+create table user(
+  id int primary key auto_increment,
+  name varchar(100) not null,
+  email varchar(100) not null unique key,
+  contact varchar(10) not null unique key,
+  password varchar(10));
