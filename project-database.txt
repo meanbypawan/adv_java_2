@@ -4,3 +4,25 @@ create table user(
   email varchar(100) not null unique key,
   contact varchar(10) not null unique key,
   password varchar(10));
+  
+  create table product(
+  id int primary key auto_increment,
+  title varchar(100),
+  description varchar(1000),
+  category varchar(20),
+  price float(10,2),
+  discountPercentage float(10,2),
+  rating float(10,2),
+  stock int,
+  brand varchar(100),
+  warrantyInformation varchar(100),
+  shippingInformation varchar(100),
+  availabilityStatus varchar(100),
+  images varchar(1000),
+  thumbnail varchar(255)) 
+  
+    create table review(id int primary key auto_increment, rating int(2), comment
+ varchar(1000), date varchar(100), reviewerName varchar(100), reviewerEmail varchar(100));
+ 
+ alter table review add (productId int,
+    foreign key(productId) references product(id));
