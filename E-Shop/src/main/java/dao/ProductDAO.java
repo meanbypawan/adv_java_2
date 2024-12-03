@@ -2,7 +2,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.StringJoiner;
 
 import model.Product;
@@ -10,6 +12,90 @@ import model.Review;
 import service.GetConnection;
 
 public class ProductDAO {
+  public static Product getProduct(int id) {
+	  Product p = null;
+	  try(Connection con = GetConnection.getConnection();){
+		  String sql = "select * from product where id = ?";
+		  PreparedStatement ps = con.prepareStatement(sql);
+		  ps.setInt(1, id);
+		  ResultSet rs =  ps.executeQuery();
+	      if(rs.next()) {
+	    	  String title= rs.getString("title");
+	    	  float price = rs.getFloat("price");
+	    	  String description = rs.getString("description");
+	    	  String category  =rs.getString("category");
+	    	  float discountPercentage = rs.getFloat("discountPercentage");
+	    	  float rating  = rs.getFloat("rating");
+	    	  int stock = rs.getInt("stock");
+	    	  String brand = rs.getString("brand");
+	    	  String warrantyInformation =rs.getString("warrantyInformation");
+	    	  String shippingInformation = rs.getString("shippingInformation");
+	    	  String availabilityStatus = rs.getString("availabilityStatus");
+	    	  String images = rs.getString("images");
+	          String imagesArray[] = images.split(",");
+	          ArrayList<String>imageList = new ArrayList<String>();
+	          for(String url : imagesArray)
+	           imageList.add(url);	    
+	          String thumbnail = rs.getString("thumbnail");
+	          
+	          String sql2 = "select * from review where productId="+id;
+	          PreparedStatement ps2 = con.prepareStatement(sql2);
+	          ResultSet rs2 = ps2.executeQuery();
+	          ArrayList<Review> reviewList = new ArrayList<Review>();
+	          while(rs2.next()) {
+	        	  int reviewId = rs2.getInt("id");
+	        	  int reviewRating = rs2.getInt("rating");
+	        	  String comment = rs2.getString("comment");
+	        	  String date = rs2.getString("date");
+	        	  String reviewerName = rs2.getString("reviewerName");
+	        	  String reviewerEmail = rs2.getString("reviewerEmail");
+	        	  int productId =id;
+	        	  Review review = new Review(reviewId, reviewRating, comment, date, reviewerName, reviewerEmail, productId);
+	              reviewList.add(review);
+	          }
+	          p = new Product(id, title, description, category, price, discountPercentage, rating, stock, brand, warrantyInformation, shippingInformation, availabilityStatus, imageList, reviewList, thumbnail);
+	      }
+	  }
+	  catch(Exception e) {
+		  e.printStackTrace();
+	  }
+	  return p;
+  }
+  public static ArrayList<Product> getProductList(){
+	  ArrayList<Product> al = new ArrayList<Product>();
+	  try(Connection con = GetConnection.getConnection();){
+		  String sql = "select * from product";
+		  PreparedStatement ps = con.prepareStatement(sql);
+		  ResultSet rs =  ps.executeQuery();
+	      while(rs.next()) {
+	    	  int id = rs.getInt(1);
+	    	  String title= rs.getString("title");
+	    	  float price = rs.getFloat("price");
+	    	  String description = rs.getString("description");
+	    	  String category  =rs.getString("category");
+	    	  float discountPercentage = rs.getFloat("discountPercentage");
+	    	  float rating  = rs.getFloat("rating");
+	    	  int stock = rs.getInt("stock");
+	    	  String brand = rs.getString("brand");
+	    	  String warrantyInformation =rs.getString("warrantyInformation");
+	    	  String shippingInformation = rs.getString("shippingInformation");
+	    	  String availabilityStatus = rs.getString("availabilityStatus");
+	    	  String images = rs.getString("images");
+	          String imagesArray[] = images.split(",");
+	          ArrayList<String>imageList = new ArrayList<String>();
+	          for(String url : imagesArray)
+	           imageList.add(url);	    
+	          String thumbnail = rs.getString("thumbnail");
+	          
+	          Product p = new Product(id, title, description, category, price, discountPercentage, rating, stock, brand, warrantyInformation, shippingInformation, availabilityStatus, imageList, null, thumbnail);
+	          al.add(p);
+	      }
+	  }
+	  catch(Exception e) {
+		  e.printStackTrace();
+	  }
+	  return al;
+  }
   public static boolean save(ArrayList<Product> al) {
 	  boolean status = false;
 	  try(Connection con = GetConnection.getConnection();){
