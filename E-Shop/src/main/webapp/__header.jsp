@@ -8,7 +8,7 @@
     <%} %>
     <span>Home</span>
     <span>Categories</span>
-    <span>Products</span>
+    <a href="dashboard.jsp"><span>Products</span></a>
     <%if(isLoggedIn == null){ %>
     <span><a href="signin.jsp" class="text-white">Sign in</a></span>
     <span><a href="signup.jsp" class="text-white" style="text-decoration:none;">Sign up</a></span>

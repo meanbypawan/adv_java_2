@@ -8,6 +8,7 @@ import model.Category;
 import service.GetConnection;
 
 public class CategoryDAO {
+	
    public static boolean saveInBulk(ArrayList<Category> al) {
 	   boolean status  = false;
 	   Connection con = null;
